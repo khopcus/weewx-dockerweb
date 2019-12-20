@@ -1,5 +1,7 @@
-.DS_Store
-.idea
-*.iml
-**/*.pyc
-Dockerfile.template
+__pycache__
+.python-version
+.pytest_cache
+data/*
+weewx.conf*
+data*/*
+docker-compose.yml
