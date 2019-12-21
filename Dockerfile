@@ -5,7 +5,7 @@ FROM debian:stretch
 #############################
 
 RUN apt-get update && apt-get full-upgrade -y \
-    && apt-get install python python-pil python-imaging python-configobj python-cheetah mysql-client python-mysqldb ftp python-dev python-pip curl wget rsyslog procps gnupg -y && pip install pyephem
+    && apt-get install python python-pil python-imaging python-configobj python-cheetah mysql-client python-mysqldb ftp python-dev python-pip curl wget rsyslog procps nano gnupg -y && pip install pyephem
 
 #################
 # Install WeewX #
