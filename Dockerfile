@@ -29,6 +29,8 @@ RUN cd /tmp && wget -O weewx-interceptor.zip https://github.com/matthewwall/weew
 ADD ${PWD}/src/skin.conf /home/weewx/skins/neowx/skin.conf
 ADD ${PWD}/src/daily.json.tmpl /home/weewx/skins/neowx/daily.json.tmpl
 
+USER 1000:1000
+
 #################
 # Execute Weewx #
 #################
