@@ -1,4 +1,5 @@
 FROM debian:stretch
+ADD VERSION .
 
 #############################
 # Install Required Packages #
