@@ -3,7 +3,6 @@ set -ex
 # SET THE FOLLOWING VARIABLES
 # docker hub username
 USERNAME=khopcuskmf
-
 # image name
 IMAGE=wewwx-dockerweb
 
@@ -24,6 +23,7 @@ git commit -m "version $version"
 git tag -a "$version" -m "version $version"
 git push
 git push --tags
+
 docker tag $USERNAME/$IMAGE:latest $USERNAME/$IMAGE:$version
 
 # push it
