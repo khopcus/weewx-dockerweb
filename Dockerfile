@@ -29,8 +29,7 @@ RUN cd /tmp && wget -O weewx-interceptor.zip https://github.com/matthewwall/weew
 ADD ${PWD}/src/skin.conf /home/weewx/skins/neowx/skin.conf
 ADD ${PWD}/src/daily.json.tmpl /home/weewx/skins/neowx/daily.json.tmpl
 
-RUN addgroup -g 1001 -S weewx && \
-    adduser -u 1001 -S weewx -G weewx
+RUN useradd -r -U -u 1001 weewx
 
 #################
 # Execute Weewx #
