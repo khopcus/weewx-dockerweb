@@ -35,5 +35,5 @@ RUN cd /home/weewx && cp util/init.d/weewx.debian /etc/init.d/weewx && chmod +x 
 # Execute Weewx #
 #################
 
-#CMD ["/home/weewx/bin/weewxd","/home/weewx/weewx.conf"]
-CMD ["/etc/init.d/weewx start"]
+CMD ["/home/weewx/bin/weewxd","/home/weewx/weewx.conf"]
+#CMD ["bin/sh"]
