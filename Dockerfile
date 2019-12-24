@@ -31,6 +31,8 @@ ADD ${PWD}/src/daily.json.tmpl /home/weewx/skins/neowx/daily.json.tmpl
 
 RUN useradd -r -U -u 1001 weewx
 
+USER weewx
+
 #################
 # Execute Weewx #
 #################
