@@ -1,5 +1,5 @@
 FROM debian:stretch
-PATH=/home/weewx/bin:$PATH
+PATH=$HOMEDIR/bin:$PATH
 
 #############################
 # Install Required Packages #
