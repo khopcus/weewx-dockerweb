@@ -11,7 +11,7 @@ IMAGE=wewwx-dockerweb
 git pull
 
 # bump version
-docker run --rm -v "$PWD":/app treeder/bump patch
+docker run --rm -v "/$PWD":/app treeder/bump patch
 version=`cat VERSION`
 echo "version: $version"
 
