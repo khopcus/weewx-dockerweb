@@ -29,12 +29,11 @@ RUN cd /tmp && wget -O weewx-interceptor.zip https://github.com/matthewwall/weew
 ADD ${PWD}/src/skin.conf /home/weewx/skins/neowx/skin.conf
 ADD ${PWD}/src/daily.json.tmpl /home/weewx/skins/neowx/daily.json.tmpl
 
-RUN useradd -r -U -u 1001 weewx
-
-USER weewx
+RUN cd /home/weewx && cp util/init.d/weewx.debian /etc/init.d/weewx && chmod +x /etc/init.d/weewx && update-rc.d weewx defaults 98
 
 #################
 # Execute Weewx #
 #################
 
-CMD ["/home/weewx/bin/weewxd","/home/weewx/weewx.conf"]
+#CMD ["/home/weewx/bin/weewxd","/home/weewx/weewx.conf"]
+CMD ["/etc/init.d/weewx start"]
