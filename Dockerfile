@@ -1,4 +1,5 @@
 FROM debian:stretch
+PATH=/home/weewx/bin:$PATH
 
 #############################
 # Install Required Packages #
@@ -28,12 +29,6 @@ RUN cd /tmp && wget -O weewx-interceptor.zip https://github.com/matthewwall/weew
 
 ADD ${PWD}/src/skin.conf /home/weewx/skins/neowx/skin.conf
 ADD ${PWD}/src/daily.json.tmpl /home/weewx/skins/neowx/daily.json.tmpl
-
-RUN groupadd -r -g 1000 pi
-RUN useradd -r -u 1000 -g pi pi
-RUN chown -R pi:pi /home/weewx
-
-USER pi
 
 #################
 # Execute Weewx #
